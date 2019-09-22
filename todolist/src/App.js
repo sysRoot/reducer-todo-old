@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from "react";
+import { todoState } from "./state/TodoState";
+import { todoReducer } from "./reducers/TodoReducer";
+import { TodoContext } from "./contexts/TodoContext";
+import List from "./components/List";
+import "./App.css";
+import AddItem from "./components/AddItem";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [state, dispatch] = useReducer(todoReducer, todoState);
+
+    return (
+        <TodoContext.Provider value={state}>
+            <div className="appContainer">
+                <AddItem dispatch={dispatch} />
+                <List dispatch={dispatch}/>
+            </div>
+        </TodoContext.Provider>
+    );
 }
 
 export default App;
