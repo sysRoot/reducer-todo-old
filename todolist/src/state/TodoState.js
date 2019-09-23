@@ -3,7 +3,7 @@ export const todoState = localStorage.getItem("todoData")
     : [
           {
               description:
-                  "Add a todo, to get started, click to toggle completed status",
+                  "To get started, add an item.",
               completed: true,
               id: 1
           }
