@@ -1,4 +1,10 @@
-export const todoState = [
-    {description: 'Get a todo list going', completed: true, id: 331242},
-    {description: 'Complete todo list',completed: false, id: 9932114}
-]
+export const todoState = localStorage.getItem("todoData")
+    ? JSON.parse(localStorage.getItem("todoData"))
+    : [
+          {
+              description:
+                  "Add a todo, to get started, click to toggle completed status",
+              completed: true,
+              id: 1
+          }
+      ];

@@ -5,7 +5,7 @@ import './Todo.css'
 
 const List = (props) => {
     const todoList = useContext(TodoContext);
-
+    
     return (
         <div className="outputList">
             {todoList.map(cur => {
