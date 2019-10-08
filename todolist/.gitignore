@@ -4,14 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
-/todolist/node_modules
 
 # testing
 /coverage
 
 # production
 /build
-/todolist/build
 
 # misc
 .DS_Store
