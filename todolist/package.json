@@ -2,7 +2,6 @@
   "name": "todolist",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kad.ink/todoV4",
   "dependencies": {
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
